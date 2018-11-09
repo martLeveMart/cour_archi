@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion projet IPI</title><script src="jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="proj.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="proj.css"/>
+</head>
+<body>
+<header>
+    <p class="connexion">Connexion</p>
+    <div class="proj" style="display:none">
+        <div id="info"></div>
+        <div id="deco" onclick="Deco()">
+            DECONNECTER
+        </div>
+    </div>
+</header>
+
+<div class="ecran" id="connexion">
+    <div id="bloc">
+        Identifiant: <br><br>
+        <input type="text" name="identifiant" placeholder="id"><br><br>
+        Mot de passe:<br><br>
+        <input type="password" name="password" placeholder="password"><br>
+        <span style="display:none" id="errorCo">L'identifiant ou le mot de passe est mal renseigner</span><br>
+        <div id="fin" class="Connexion">
+            <div class="button" onclick="Validation()">Connexion</div>
+            <a onclick="changeCo()">Créer un compte</a>
+        </div>
+        <link rel="import" href="page2.html">
+    </div>
+</div>
+<div class="ecran" id="projet" style="display:none">
+    <div id="left">
+        <div id="titleMenu">
+            <div>Liste des notes :</div>
+            <img src="./image/plus.jpg" class="addNote"></img>
+        </div>
+        <div id="todoListe" ></div>
+    </div>
+    <div id="right">
+        <div id="headerNote">
+            <span id="titre">Titre</span>
+            <img src="./image/suppr.png" class="supprNote"></img>
+        </div>
+        <div id="contentNote">
+            <img src="./image/plus.jpg" class="addTache"></img>
+            <!--<span style="font-size: 16px">Ajouter tâche</span>-->
+            <ul id="liste">
+
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
